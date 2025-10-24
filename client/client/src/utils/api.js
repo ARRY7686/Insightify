@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create axios instance with base configuration
 const api = axios.create({
-  baseURL: 'https://insightify-yang.onrender.com/',
+  baseURL: 'https://insightify-yang.onrender.com/api',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
