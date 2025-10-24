@@ -13,7 +13,7 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: process.env.CLIENT_URL || "http://localhost:5173"||"https://insightify-yang.onrender.com",
     methods: ["GET", "POST"]
   }
 });
@@ -23,7 +23,7 @@ app.use(helmet());
 app.use(compression());
 app.use(morgan('combined'));
 app.use(cors({
-  origin: process.env.CLIENT_URL || "http://localhost:5173",
+  origin: process.env.CLIENT_URL || "http://localhost:5173"||"https://insightify-yang.onrender.com",
   credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));
